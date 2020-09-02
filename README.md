@@ -24,7 +24,7 @@ In this project I utilized ROS AMCL package to accurately localize a mobile robo
 * Install the necessary packages 
 * Clone this repository 
 * Open the repository and make \
-`cd /home/workspace/P3-Where-Am-I/catkin_ws/` \
+`cd /{your_directory}/catkin_ws/` \
 `catkin_make`
 * Launch my_robot in Gazebo to load both the world and the plugins \
 `roslaunch my_robot world.launch`
