@@ -30,8 +30,22 @@ In this project I utilized ROS AMCL package to accurately localize a mobile robo
 `roslaunch my_robot world.launch`
 * Launch amcl node \
 `roslaunch my_robot amcl.launch`
-* Testing 
-⋅⋅
+* Testing: \
+  You have two options to control your robot while it localize itself here:
+  1) Send navigation goal via RViz
+  2) Send move command via teleop package.
+
+Navigate your robot, observe its performance and tune your parameters for AMCL. \
+\
+**Option 1: Send 2D Navigation Goal** \
+* Your first option would be sending a 2D Nav Goal from RViz. The move_base will try to navigate your robot based on the localization. Based on the new observation and the odometry, the robot to further perform the localization. \
+* Click the `2D Nav Goal button` in the toolbar, then click and drag on the map to send the goal to the robot. It will start moving and localize itself in the process. If you would like to give amcl node a nudge, you could give the robot an initial position estimate on the map using `2D Pose Estimate`. \
+
+**Option 2: Use teleop Node** \
+* You could also use teleop node to control your robot and observe it localize itself in the environment. \
+* Open another terminal and launch the teleop script: 
+
+`rosrun teleop_twist_keyboard teleop_twist_keyboard.py`
 
 
 
